@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="AlertPopup" id="g82-v8-mh5" customClass="AlertPopup" customModule="VBPopupView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yK1-BG-SEr" userLabel="NoInternet">
+                    <rect key="frame" x="40" y="324.5" width="334" height="247"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi" translatesAutoresizingMaskIntoConstraints="NO" id="0VQ-bR-Ant">
+                            <rect key="frame" x="143" y="50" width="48" height="48"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="85" id="aZs-Oz-45H"/>
+                                <constraint firstAttribute="width" secondItem="0VQ-bR-Ant" secondAttribute="height" multiplier="1:1" id="gS7-vT-GaJ"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No internet connection" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESg-7q-cq4">
+                            <rect key="frame" x="25" y="113" width="284" height="28"/>
+                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="23"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmD-la-TCY">
+                            <rect key="frame" x="75" y="166" width="184" height="36"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="gmD-la-TCY" secondAttribute="height" multiplier="92:18" id="ZyD-6f-RPF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
+                            <state key="normal" title="Retry">
+                                <color key="titleColor" red="0.074509803920000006" green="0.29803921570000003" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="actionRetry:" destination="g82-v8-mh5" eventType="touchUpInside" id="5S2-Y0-AGQ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.21069224625358565" green="0.37041831541870801" blue="0.43471810089020768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="ESg-7q-cq4" firstAttribute="leading" secondItem="yK1-BG-SEr" secondAttribute="leading" constant="25" id="2Q0-ho-Bix"/>
+                        <constraint firstAttribute="trailing" secondItem="ESg-7q-cq4" secondAttribute="trailing" constant="25" id="4jn-EY-v95"/>
+                        <constraint firstItem="ESg-7q-cq4" firstAttribute="top" secondItem="0VQ-bR-Ant" secondAttribute="bottom" constant="15" id="5Ld-LS-xL7"/>
+                        <constraint firstAttribute="bottom" secondItem="gmD-la-TCY" secondAttribute="bottom" constant="45" id="Bbp-ch-gr1"/>
+                        <constraint firstItem="gmD-la-TCY" firstAttribute="centerX" secondItem="yK1-BG-SEr" secondAttribute="centerX" id="U4M-Gl-bn2"/>
+                        <constraint firstItem="0VQ-bR-Ant" firstAttribute="top" secondItem="yK1-BG-SEr" secondAttribute="top" constant="50" id="YWS-Eb-qHq"/>
+                        <constraint firstItem="0VQ-bR-Ant" firstAttribute="centerX" secondItem="yK1-BG-SEr" secondAttribute="centerX" id="oDN-L7-BMv"/>
+                        <constraint firstItem="gmD-la-TCY" firstAttribute="width" secondItem="yK1-BG-SEr" secondAttribute="width" multiplier="0.55" id="oKY-7n-pMk"/>
+                        <constraint firstItem="gmD-la-TCY" firstAttribute="top" secondItem="ESg-7q-cq4" secondAttribute="bottom" constant="25" id="x01-8M-xEA"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="yK1-BG-SEr" firstAttribute="centerX" secondItem="g82-v8-mh5" secondAttribute="centerX" id="4ff-1d-lcX"/>
+                <constraint firstItem="yK1-BG-SEr" firstAttribute="centerY" secondItem="g82-v8-mh5" secondAttribute="centerY" id="8gD-vu-cfz"/>
+                <constraint firstAttribute="trailing" secondItem="yK1-BG-SEr" secondAttribute="trailing" constant="40" id="P4P-bF-QgB"/>
+                <constraint firstItem="yK1-BG-SEr" firstAttribute="leading" secondItem="g82-v8-mh5" secondAttribute="leading" constant="40" id="cTK-Ft-gdQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="sh9-4m-0Vh"/>
+            <connections>
+                <outlet property="btnRetry" destination="gmD-la-TCY" id="fJA-Uz-wZ9"/>
+                <outlet property="imageViewIcon" destination="0VQ-bR-Ant" id="cCj-6D-1AF"/>
+                <outlet property="lblMessage" destination="ESg-7q-cq4" id="5qy-uh-2U2"/>
+                <outlet property="viewNoInternet" destination="yK1-BG-SEr" id="0iz-X5-ewj"/>
+            </connections>
+            <point key="canvasLocation" x="1560.8695652173915" y="208.92857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="wifi" width="48" height="48"/>
+    </resources>
+</document>
